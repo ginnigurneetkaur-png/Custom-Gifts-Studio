@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create an account or sign in to Custom Gifts Studio.">
+  <title>Sign up or sign in | Custom Gifts Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="account-page">
+  <header class="account-header">
+    <a href="index.html" class="logo" aria-label="Custom Gifts Studio home">
+      <img src="images/custom-gifts-logo.png" alt="Custom Gifts Studio logo">
+    </a>
+    <a class="account-back" href="index.html">← Back to shop</a>
+  </header>
+
+  <main class="account-layout">
+    <section class="account-intro" aria-labelledby="accountIntroTitle">
+      <span class="eyebrow">A LITTLE MORE PERSONAL</span>
+      <h1 id="accountIntroTitle">Gifts made for <em>your people.</em></h1>
+      <p>Sign in to keep your thoughtful ideas close and make your next special gift.</p>
+      <div class="account-perk">♡ Your moments. Your gifts. Your story.</div>
+      <div class="account-art">
+        <img
+          src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=900&q=85"
+          alt="A beautifully wrapped gift ready for someone special"
+          loading="lazy"
+        >
+        <span class="account-art-label">made with love ♡</span>
+      </div>
+    </section>
+
+    <section class="account-card" aria-labelledby="accountTitle">
+      <div class="account-switch" aria-label="Choose an account action">
+        <a href="#signup" data-account-mode="signup" aria-current="page">Create account</a>
+        <a href="#login" data-account-mode="login" aria-current="false">Sign in</a>
+      </div>
+
+      <h2 id="accountTitle">Create your account</h2>
+      <p class="account-subtitle" id="accountSubtitle">
+        Sign up to make every gift a little more personal.
+      </p>
+
+      <form class="account-form" id="accountForm">
+        <div id="accountNameField">
+          <label for="accountName">Your name</label>
+          <input
+            type="text"
+            id="accountName"
+            name="name"
+            autocomplete="name"
+            placeholder="Alex Morgan"
+            required
+          >
+        </div>
+
+        <label for="accountEmail">Email address</label>
+        <input
+          type="email"
+          id="accountEmail"
+          name="email"
+          autocomplete="email"
+          placeholder="you@example.com"
+          required
+        >
+
+        <label for="accountPassword">Password</label>
+        <div class="password-field">
+          <input
+            type="password"
+            id="accountPassword"
+            name="password"
+            autocomplete="new-password"
+            minlength="8"
+            placeholder="At least 8 characters"
+            required
+          >
+          <button
+            class="password-toggle"
+            type="button"
+            data-password-toggle="accountPassword"
+            aria-label="Show password"
+          >Show</button>
+        </div>
+
+        <div id="confirmPasswordField">
+          <label for="confirmPassword">Confirm password</label>
+          <div class="password-field">
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              autocomplete="new-password"
+              minlength="8"
+              placeholder="Enter your password again"
+              required
+            >
+            <button
+              class="password-toggle"
+              type="button"
+              data-password-toggle="confirmPassword"
+              aria-label="Show password"
+            >Show</button>
+          </div>
+        </div>
+
+        <button class="button button-primary" id="accountSubmit" type="submit">
+          Create account
+        </button>
+      </form>
+
+      <p class="account-message" id="accountMessage" role="status" aria-live="polite"></p>
+      <p class="account-terms">
+        By continuing, you agree to our terms and privacy policy.
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
